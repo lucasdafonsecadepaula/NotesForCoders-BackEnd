@@ -1,0 +1,64 @@
+GET http://localhost:8000/notes
+
+################################
+POST http://localhost:8000/auth/access-acount
+Content-Type: application/json
+
+{
+    "email": "lucasdafonsecadepaula@gmail.com",
+    "password": "123"
+}
+
+################################################################
+
+
+POST http://localhost:8000/auth/create-acount
+Content-Type: application/json
+
+{
+    "name": "Lucas",
+    "email": "lucasdafonsecadepaula@gmail.com",
+    "password": "1"
+}
+
+
+################################################################
+POST http://localhost:8000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email": "lucasdafonsecadepaula@gmail.com"
+}
+
+#########################################
+POST http://localhost:8000/auth/forgot-password-verify-token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxOWQ4OGU2MjUyNzFmNWM2NDMxNzYzOCIsImlhdCI6MTYzNzk0MzA0MiwiZXhwIjoxNjM3OTQzOTQyfQ.NAXCFwWJz1mgdCcQ5PF6pfcBNkJcBoVgw98bAss4FEM",
+    "password": "555"
+}
+
+
+################################################################################################
+GET http://localhost:8000/auth/verifytoken
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjdlZDI2Mjc5YWJhMzNmNWQwOTI1NCIsImlhdCI6MTYzOTQ2MTM4OSwiZXhwIjoxNjM5NTQ3Nzg5fQ.uixHKYgHRnPgNnde0tc3O3KoUNpGOzKio3-kuEguXuA
+
+#########################################
+POST http://localhost:8000/auth/create-note
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjYxZDNjNmIxZmU2NGEwM2RlNWE2YSIsImlhdCI6MTYzOTMzOTYyMCwiZXhwIjoxNjM5NDI2MDIwfQ.kR_uRbVyI1oryOQ5-poN9BQ3tK4Q0RTe0O-ZdP522wg
+
+{
+    "avatar": "",
+    "title": "{require: false}",
+    "description": "TESTANDO"
+}
+
+
+################################
+
+
+
+
+
