@@ -20,7 +20,7 @@ async function forgotPassword(req, res) {
 
     const html = fs.readFileSync("./resources/mail/index.html", "utf8");
     const template = handlebars.compile(html)
-    const htmlToSend = template({token: "http://localhost:3000/forgot_password/pass?token="+token, name: user.name})
+    const htmlToSend = template({token: "https://notesforcoders.vercel.app/forgot_password/pass?token="+token, name: user.name})
 
     await transporter.sendMail({
       to: email,
