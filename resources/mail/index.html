@@ -1,195 +1,99 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .main {
-        background-image: linear-gradient(
-          to right top,
-          #d16ba5,
-          #c777b9,
-          #ba83ca,
-          #aa8fd8,
-          #9a9ae1,
-          #8aa7ec,
-          #79b3f4,
-          #69bff8,
-          #52cffe,
-          #41dfff,
-          #46eefa,
-          #5ffbf1
-        );
-        width: 300px;
-        height: 500px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-      }
-      @media screen and (min-width: 500px) {
-        .main {
-          background-image: linear-gradient(
+
+    <body>
+        <div if="header" style="
+            position: relative;
+            background-image: linear-gradient(
             to right top,
             #d16ba5,
             #c777b9,
             #ba83ca,
             #aa8fd8,
             #9a9ae1,
-            #8aa7ec,
+            #8aa7ec
+          );width: 500px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ">
+              <div style="margin: auto;">
+                <h1 style="margin: auto;
+                display:inline;
+                color: white;
+                text-shadow: 2px 2px #000000;
+                margin-right: 0.5rem;">Redefir Senha</h1>
+                <img src="cid:logo" style="width: 50px;
+                height: 50px;" />
+              </div>
+        </div>
+
+        <div
+            id="content"
+              style="
+                width: 500px;
+                background-color: white;
+                height: 300px;
+              "
+            >
+            
+                <h2 style="margin-left: 1rem;
+                padding: 2rem;color:#000000">Olá, {{name}}</h2>
+                <p style="margin-left: 1rem;
+                margin-right: 1rem;
+                padding-bottom: 2rem;color:#000000">
+                  Precisa de redefir a senha?! Clique no botão a baixo para ser
+                  redirecionado para a página de redefinição!
+                </p>
+                <a style="background-image: linear-gradient(
+                  to right top,
+                  #d16ba5,
+                  #c777b9,
+                  #ba83ca,
+                  #aa8fd8,
+                  #9a9ae1,
+                  #8aa7ec,
+                  #79b3f4,
+                  #69bff8,
+                  #52cffe,
+                  #41dfff,
+                  #46eefa,
+                  #5ffbf1
+                );
+                text-decoration: none;
+                color: white;
+                text-shadow: 1px 1px #000000;
+                padding: 0.75rem;
+                margin-left: 1rem;margin: 3rem;" href="{{token}}">Redefir Senha</a>
+              
+            </div>
+
+        <div id="footer" style="margin-top:2rem;
+            position: relative;
+            background-image: linear-gradient(
+            to right top,
             #79b3f4,
             #69bff8,
             #52cffe,
             #41dfff,
             #46eefa,
             #5ffbf1
-          );
-          width: 500px;
-          height: 500px;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
-        }
-      }
-
-      body {
-        font-family: "Roboto", sans-serif;
-      }
-
-      .body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .header {
-        width: 100%;
-        height: 20%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-      }
-
-      .cotainer {
-        width: 100%;
-        background-color: white;
-        height: 60%;
-        z-index: 20;
-        background-image: linear(to top, #ffff);
-      }
-
-      .footer {
-        width: 100%;
-        height: 20%;
-      }
-
-      .btn {
-        background-image: linear-gradient(
-          to right top,
-          #d16ba5,
-          #c777b9,
-          #ba83ca,
-          #aa8fd8,
-          #9a9ae1,
-          #8aa7ec,
-          #79b3f4,
-          #69bff8,
-          #52cffe,
-          #41dfff,
-          #46eefa,
-          #5ffbf1
-        );
-        text-decoration: none;
-        color: white;
-        text-shadow: 1px 1px #000000;
-        padding: 0.75rem;
-        margin-left: 1rem;
-      }
-
-      .title {
-        color: white;
-        text-shadow: 2px 2px #000000;
-        margin-right: 0.5rem;
-      }
-      .imglogo {
-        width: 50px;
-        height: 50px;
-      }
-      .description-h2 {
-        margin-left: 1rem;
-        padding: 2rem;
-      }
-      .description-p {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding-bottom: 2rem;
-      }
-      .github {
-        text-decoration: none;
-        color: white;
-        text-shadow: 1px 1px #000000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .span {
-        margin: 0 0.5rem;
-      }
-      .imgeu {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-      }
-    </style>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <div
-      class="body"
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <div class="main">
-        <div class="header">
-          <h1 class="title">Redefir Senha</h1>
-          <img src="cid:logo" class="imglogo" />
+          );width: 500px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ">
+              <a style="margin: auto;text-decoration: none;
+              color: white;
+              text-shadow: 1px 1px #000000;
+              display: flex;
+              align-items: center;
+              justify-content: center;" href="https://github.com/lucasdafonsecadepaula">
+                Powered by <strong>Lucas</strong>
+                <img src="cid:eu" style="width: 25px;
+                height: 25px;
+                border-radius: 50%;" />
+              </a>
         </div>
-
-        <div
-          class="container"
-          style="
-            width: 100%;
-            background-color: white;
-            height: 60%;
-            z-index: 20;
-            background-image: linear(to top, #ffff);
-          "
-        >
-          <h2 class="description-h2">Olá, {{name}}</h2>
-          <p class="description-p">
-            Precisa de redefir a senha?! Clique no botão a baixo para ser
-            redirecionado para a página de redefinição!
-          </p>
-          <a class="btn" href="{{token}}">Redefir Senha</a>
-        </div>
-
-        <div class="header">
-          <a class="github" href="https://github.com/lucasdafonsecadepaula">
-            Powered by <span class="span">Lucas</span>
-            <img src="cid:eu" class="imgeu" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </body>
+      </body>
 </html>
